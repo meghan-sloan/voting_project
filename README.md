@@ -6,11 +6,9 @@ I recommend using pandas.
 In the voting_EDA.ipynb jupyter notebook you can use the code to look at the data.
 
 ### Cleaning
-From the EDA, it is obvious that cleaning is needed.
+From the EDA, it is obvious that cleaning is needed as some of the data has ended up in the wrong column.
 There are only 4 lines in the precinct_polling_list.csv that need cleaning, so this can be done manually.
-***However, there are optional functions in the merge_tables.py file for certain cleaning circumstances 
-if manual cleaning is unreasonable.***
-Additionally, for large datasets, the code could be run and sorted by "NOT AVAILABLE" and new functions written for specific errors.
+However, for large datasets, the merging_data.py code could be run and the resulting data sorted by "NOT AVAILABLE".  New functions could be written for specific errors.  An example is the check_if_zip function in the merging_data.py file.
 
 ### Merging
 This is an explanation of the merging_data.py file.  
@@ -34,9 +32,30 @@ There are other addresses with precinct IDs that do not appear in the precinct_p
 3. From the command line type python merging_data.py.  This will save a merged file to the current directory.
 
 ### VIP formatting
-I used Google drive to format the combined.csv into the polling_location.txt, precinct.txt and precinct_polling_location.txt.
-I sorted by address and elimintated "NOT AVAILABLE" rows
-Created a new sheet with only the desired rows
-Copied the necessary data
+Google drive was used to format the combined.csv into the polling_location.txt, precinct.txt and precinct_polling_location.txt.
+Rows were sorted by address and elimintated if "NOT AVAILABLE" since only precinct polling data would be needed.
+A new sheet with only the desired columns and copied the necessary data from the combined data sheet. This sheet was downloaded as a .csv, the name changed and the extension changed to .txt.
+ASSUMPTIONS:
+* The precinct ID is the same as the id in the polling_location.txt 'id', the precinct.txt 'id' and the precinct_polling_location.txt 'precinct_id'
+* The precinct.txt name/number is just the precinct specific part of the precinct id
+
+NOTE: 
+* In the csv files provided, there is only street, city, state, zip, country, and precinct.  I am not sure where to find the information for the VIP files:  
+
+ File      | Missing Data              
+------------- |:-------------:    
+polling_location.txt      | address_location_name, directions, polling_hours, photo_url   
+precinct.txt   | name, locality_id, ward, mail_only, ballot_style_image_url   
+precinct_polling_location | polling_location_id    
+
+
+### Future Work
+In the interest of time, I am submitting the combined csv file as well as the VIP formatted file as is.  
+I will continue to explore this problem.  I would like to:
+* Write a script to automate the VIP formatting
+* See if I can find missing information using the Google Civic API
+* Add additional cleaning functions
+* Build an app that can be hosted on AWS so that users can just upload files and a merged file will be created and can be downloaded.
+
 
 
