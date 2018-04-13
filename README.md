@@ -43,6 +43,7 @@ Copied the necessary data
 In the interest of time, I am submitting the combined csv file as well as the VIP formatted file as is.  
 I will continue to explore this problem.  I would like to:
 * See if I can find missing information using the Google Civic API
+* Add additional cleaning functions
 * Build an app that can be hosted on AWS so that users can just upload files and a merged file will be created and can be downloaded.
 
 
