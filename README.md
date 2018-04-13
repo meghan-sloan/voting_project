@@ -2,8 +2,8 @@
 
 ### Preliminary data analysis
 The first step is to look at the data to see how it is structured and if any cleaning is necessary.  
-I recommend using pandas
-In the voting_EDA.ipynb jupyter notebook you can use the code to look at the data 
+I recommend using pandas.  
+In the voting_EDA.ipynb jupyter notebook you can use the code to look at the data.
 
 ### Cleaning
 From the EDA, it is obvious that cleaning is needed.
