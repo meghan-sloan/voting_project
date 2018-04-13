@@ -9,9 +9,8 @@ In the voting_EDA.ipynb jupyter notebook you can use the code to look at the dat
 From the EDA, it is obvious that cleaning is needed.
 There are only 4 lines in the precinct_polling_list.csv that need cleaning, so this can be done manually.
 ***However, there are optional functions in the merge_tables.py file for certain cleaning circumstances 
-if manual cleaning is unattainable.***
-Additionally, for large datasets, the code could be run and sorted by "NOT AVAILABLE".  If cleaning manually is 
-unreasonable, new functions can be written for specific errors.
+if manual cleaning is unreasonable.***
+Additionally, for large datasets, the code could be run and sorted by "NOT AVAILABLE" and new functions written for specific errors.
 
 ### Merging
 This is an explanation of the merging_data.py file.  
@@ -33,4 +32,11 @@ There are other addresses with precinct IDs that do not appear in the precinct_p
 1. Name the files addresses.csv and precinct_polling_list.csv 
 2. Make sure the merging_data.py file is in the same directory as the 
 3. From the command line type python merging_data.py.  This will save a merged file to the current directory.
+
+### VIP formatting
+I used Google drive to format the combined.csv into the polling_location.txt, precinct.txt and precinct_polling_location.txt.
+I sorted by address and elimintated "NOT AVAILABLE" rows
+Created a new sheet with only the desired rows
+Copied the necessary data
+
 
