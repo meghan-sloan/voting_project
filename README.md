@@ -37,11 +37,11 @@ Rows were sorted by address and elimintated if "NOT AVAILABLE" since only precin
 A new sheet with only the desired columns and copied the necessary data from the combined data sheet. This sheet was downloaded as a .csv, the name changed and the extension changed to .txt.
 NOTES: 
 In the csv files provided, there is only street, city, state, zip, country, and precinct.  I am not sure where to find the information for the VIP files:  
-| File      | Missing Data           |  
-| ------------- |:-------------:|  
-| polling_location.txt      | address_location_name, directions, polling_hours, photo_url |   
-| precinct.txt   | name, locality_id, ward, mail_only, ballot_style_image_url     |  
-| precinct_polling_location | polling_location_id |  
+ File      | Missing Data              
+------------- |:-------------:    
+polling_location.txt      | address_location_name, directions, polling_hours, photo_url   
+precinct.txt   | name, locality_id, ward, mail_only, ballot_style_image_url   
+precinct_polling_location | polling_location_id    
  
 ### Future Work
 In the interest of time, I am submitting the combined csv file as well as the VIP formatted file as is.  
