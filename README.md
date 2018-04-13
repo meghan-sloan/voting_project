@@ -25,7 +25,7 @@ A dictionary is created with the precinct ID as the key and the address, city, s
 This dictionary is used to map the addresses in the addresses.csv to the correct polling place.  
 If data pertaining to a precinct ID from the addresses.csv is absent in the precinct_polling_list.csv, 
 "NOT AVAILABLE" is filled into the corresponding cell.  
-Note: Address 274 CABOT MAIL CTR (Line 12) has a Precinct ID as 025-076, but this ID is not found in the precinct_polling csv.  Based on the zip code, I think it is safe to assume that this is a typo, and should be corrected to 025-070, but it is currently "NOT AVAILABLE"
+Note: Address 274 CABOT MAIL CTR (Line 12) has a Precinct ID as 025-076, but this ID is not found in the precinct_polling csv.  Based on the zip code, I think it is safe to assume that this is a typo, and should be corrected to 025-070, but it is currently "NOT AVAILABLE"  
 There are other addresses with precinct IDs that do not appear in the precinct_polling_list, but I am not sure if these are typos or just not provided.  
 
 ### Instructions on using the merging_data.py file
