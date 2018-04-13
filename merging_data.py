@@ -23,7 +23,7 @@ def get_precinct_address(x, precinct_dict, column):
     try:
         return precinct_dict[x][column]
     except KeyError:
-        return '{} not available'.format(column)
+        return 'NOT AVAILABLE'
 
 if __name__ == '__main__':
     #Create dataframes for the csvs
@@ -31,6 +31,8 @@ if __name__ == '__main__':
     df_polling = pd.read_csv('/Users/meghan/DemocracyWorks/data/precinct_polling_fixed.csv', delimiter=';')
     # Create a new column with just the state
     df_polling['state'] = df_polling['State/ZIP'].apply(lambda x: x.split()[0])
+    # Create a new column with just the zip
+    df_polling['zip'] = df_polling['State/ZIP'].apply(lambda x: x.split()[-1])
     # Turn the state abbreviation into a 3 digit code
     df_polling['state_code'] = df_polling['state'].apply(lambda x: new_code(x))
     # Get the second half of the precinct code and ensure it is 3 digits
@@ -43,6 +45,7 @@ if __name__ == '__main__':
     # Add the polling address to the address dataframe
     df_address['polling_street'] = df_address['Precinct ID'].apply(lambda x: get_precinct_address(x, precinct_dict, 'Street'))
     df_address['polling_city'] = df_address['Precinct ID'].apply(lambda x: get_precinct_address(x, precinct_dict, 'City'))
-    df_address['polling_zip'] = df_address['Precinct ID'].apply(lambda x: get_precinct_address(x, precinct_dict, 'State/ZIP'))
+    df_address['polling_zip'] = df_address['Precinct ID'].apply(lambda x: get_precinct_address(x, precinct_dict, 'zip'))
+    df_address['precinct_code'] = df_address['Precinct ID'].apply(lambda x: get_precinct_address(x, precinct_dict, 'precinct_code'))
 
     df_address.to_csv('/Users/meghan/DemocracyWorks/combined.csv')
