@@ -18,6 +18,10 @@ This is an explanation of the merging_data.py file.
 In order to merge the documents based on precinct ID, the IDs must be in the same format.  
 In the merging_data.py script, the ID in the precinct_polling_list.csv is changed from the state abbreviation-precinct number
 to state number-precinct number.    
+  
+EXAMPLE:  
+NEWY-072 --> 036-072  
+  
 A dictionary is created with the precinct ID as the key and the address, city, state/ZIP as values sub-dictionaries.
 This dictionary is used to map the addresses in the addresses.csv to the correct polling place.  
 If data pertaining to a precinct ID from the addresses.csv is absent in the precinct_polling_list.csv, 
