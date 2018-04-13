@@ -1,7 +1,7 @@
 # Voting Project
 
 ### Preliminary data analysis
-The first step is to look at the data to see how it is structured and if any cleaning is necessary
+The first step is to look at the data to see how it is structured and if any cleaning is necessary.  
 I recommend using pandas
 In the voting_EDA.ipynb jupyter notebook you can use the code to look at the data 
 
