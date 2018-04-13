@@ -20,7 +20,7 @@ In the merging_data.py script, the ID in the precinct_polling_list.csv is change
 to state number-precinct number.    
   
 EXAMPLE:  
-NEWY-072 $rarr 036-072  
+NEWY-072 &rarr 036-072  
   
 A dictionary is created with the precinct ID as the key and the address, city, state/ZIP as values sub-dictionaries.
 This dictionary is used to map the addresses in the addresses.csv to the correct polling place.  
