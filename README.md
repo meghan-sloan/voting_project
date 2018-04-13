@@ -10,7 +10,7 @@ From the EDA, it is obvious that cleaning is needed as some of the data has ende
 There are only 4 lines in the precinct_polling_list.csv that need cleaning, so this can be done manually.
 However, for large datasets, the merging_data.py code could be run and the resulting data sorted by "NOT AVAILABLE".  New functions could be written for specific errors.  An example is the check_if_zip function in the merging_data.py file.
 
-In the addresses data set Massachusetts state id is 025 (048 is Texas), so precinct for adress 2 Gunderson Road (line 14) should be changed to 025 (both the state and zip field indicate that it is in Massachuesetts.
+In the addresses data set address 2 Gunderson Road (line 14) is in Massachusetts according to the state and zip code field.  However, the first part of the precinct id is 048 which is the state code for Texas.  This was changed to 025 for Massachusetts.
 
 ### Merging
 Provided in this repository is a merging_data.py file.  
