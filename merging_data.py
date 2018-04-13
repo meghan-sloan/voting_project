@@ -25,6 +25,20 @@ def get_precinct_address(x, precinct_dict, column):
     except KeyError:
         return 'NOT AVAILABLE'
 
+def check_if_zip(x, df):
+    '''Optional cleaning function to find the zip code if hidden in the City column
+    Not currently implemented in this code but provides and example of possible cleaning
+    options
+    '''
+    el_list = x.split()
+    for e in el_list:
+        if len(e) == 5:
+            try:
+                i = int(e)
+                return e
+            except ValueError:
+                pass
+
 def mk_polling_dict(df):
     '''
     Formats the polling data frames so the precinct ID is the same format
@@ -49,8 +63,8 @@ def mk_polling_dict(df):
 
 if __name__ == '__main__':
     #Create dataframes for the csvs
-    df_address = pd.read_csv('/Users/meghan/DemocracyWorks/data/addresses_fixed.csv', delimiter=';')
-    df_polling = pd.read_csv('/Users/meghan/DemocracyWorks/data/precinct_polling_fixed.csv', delimiter=';')
+    df_address = pd.read_csv('addresses.csv')
+    df_polling = pd.read_csv('precinct_polling_list.csv')
 
     # Create a dictionary of precint polling data
     precinct_dict = mk_polling_dict(df_polling)
@@ -62,4 +76,4 @@ if __name__ == '__main__':
     df_address['precinct_code'] = df_address['Precinct ID'].apply(lambda x: get_precinct_address(x, precinct_dict, 'precinct_code'))
 
     # Save to a csv
-    df_address.to_csv('/Users/meghan/DemocracyWorks/combined.csv')
+    df_address.to_csv('combined.csv')
