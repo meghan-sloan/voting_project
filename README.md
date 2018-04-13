@@ -11,7 +11,7 @@ There are only 4 lines in the precinct_polling_list.csv that need cleaning, so t
 However, for large datasets, the merging_data.py code could be run and the resulting data sorted by "NOT AVAILABLE".  New functions could be written for specific errors.  An example is the check_if_zip function in the merging_data.py file.
 
 ### Merging
-This is an explanation of the merging_data.py file.  
+Provided in this repository is a merging_data.py file.  
 In order to merge the documents based on precinct ID, the IDs must be in the same format.  
 In the merging_data.py script, the ID in the precinct_polling_list.csv is changed from the state abbreviation-precinct number
 to state number-precinct number.    
@@ -19,7 +19,7 @@ to state number-precinct number.
 EXAMPLE:  
 NEWY-072 &rarr; 036-072  
   
-A dictionary is created with the precinct ID as the key and the address, city, state/ZIP as values sub-dictionaries.
+A dictionary is created with the precinct ID as the key and the address, city, state/ZIP values as nested-dictionaries.
 This dictionary is used to map the addresses in the addresses.csv to the correct polling place.  
 If data pertaining to a precinct ID from the addresses.csv is absent in the precinct_polling_list.csv, 
 "NOT AVAILABLE" is filled into the corresponding cell.  
@@ -36,11 +36,11 @@ Google drive was used to format the combined.csv into the polling_location.txt, 
 Rows were sorted by address and elimintated if "NOT AVAILABLE" since only precinct polling data would be needed.
 A new sheet with only the desired columns and copied the necessary data from the combined data sheet. This sheet was downloaded as a .csv, the name changed and the extension changed to .txt.
 ASSUMPTIONS:
-* The precinct ID is the same as the id in the polling_location.txt 'id', the precinct.txt 'id' and the precinct_polling_location.txt 'precinct_id'
+* The precinct ID is the same as the polling_location.txt 'id', the precinct.txt 'id' and the precinct_polling_location.txt 'precinct_id'
 * The precinct.txt name/number is just the precinct specific part of the precinct id
 
 NOTE: 
-* In the csv files provided, there is only street, city, state, zip, country, and precinct.  I am not sure where to find the information for the VIP files:  
+* In the csv files provided, there is only street, city, state, zip, country, and precinct.  I am not sure where to find the following information for the VIP files:  
 
  File      | Missing Data              
 ------------- |:-------------:    
