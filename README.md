@@ -36,7 +36,7 @@ Google drive was used to format the combined.csv into the polling_location.txt, 
 Rows were sorted by address and elimintated if "NOT AVAILABLE" since only precinct polling data would be needed.
 A new sheet with only the desired columns and copied the necessary data from the combined data sheet. This sheet was downloaded as a .csv, the name changed and the extension changed to .txt.
 NOTES: 
-In the csv files provided, there is only street, city, state, zip, country, and precinct.  I am not sure where to find the information for the VIP files:
+In the csv files provided, there is only street, city, state, zip, country, and precinct.  I am not sure where to find the information for the VIP files:  
 | File      | Missing Data           |
 | ------------- |:-------------:|
 | polling_location.txt      | address_location_name, directions, polling_hours, photo_url | 
