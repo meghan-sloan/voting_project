@@ -7,10 +7,10 @@ In the voting_EDA.ipynb jupyter notebook you can use the code to look at the dat
 
 ### Cleaning
 From the EDA, it is obvious that cleaning is needed.
-There are only 4 lines in the precinct_polling_list.csv that need cleaning, so this can be done manually.
+There are only 4 lines in the precinct_polling_list.csv that need cleaning, so this can be done manually.  
 ***However, there are optional functions in the merge_tables.py file for certain cleaning circumstances 
-if manual cleaning is unattainable.***
-Additionally, for large datasets, the code could be run and sorted by "No address available".  If cleaning manually is 
+if manual cleaning is unattainable.***  
+Additionally, for large datasets, the code could be run and sorted by "NOT AVAILABLE".  If cleaning manually is 
 unreasonable, new functions can be written for specific errors.
 
 ### Merging
