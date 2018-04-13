@@ -35,15 +35,20 @@ There are other addresses with precinct IDs that do not appear in the precinct_p
 Google drive was used to format the combined.csv into the polling_location.txt, precinct.txt and precinct_polling_location.txt.
 Rows were sorted by address and elimintated if "NOT AVAILABLE" since only precinct polling data would be needed.
 A new sheet with only the desired columns and copied the necessary data from the combined data sheet. This sheet was downloaded as a .csv, the name changed and the extension changed to .txt.
-NOTES: 
-In the csv files provided, there is only street, city, state, zip, country, and precinct.  I am not sure where to find the information for the VIP files:  
+ASSUMPTIONS:
+* The precinct ID is the same as the id in the polling_location.txt 'id', the precinct.txt 'id' and the precinct_polling_location.txt 'precinct_id'
+* The precinct.txt name/number is just the precinct specific part of the precinct id
+
+NOTE: 
+* In the csv files provided, there is only street, city, state, zip, country, and precinct.  I am not sure where to find the information for the VIP files:  
 
  File      | Missing Data              
 ------------- |:-------------:    
 polling_location.txt      | address_location_name, directions, polling_hours, photo_url   
 precinct.txt   | name, locality_id, ward, mail_only, ballot_style_image_url   
 precinct_polling_location | polling_location_id    
- 
+
+
 ### Future Work
 In the interest of time, I am submitting the combined csv file as well as the VIP formatted file as is.  
 I will continue to explore this problem.  I would like to:
